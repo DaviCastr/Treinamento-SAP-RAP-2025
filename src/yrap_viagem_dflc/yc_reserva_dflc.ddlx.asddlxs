@@ -1,0 +1,55 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: { typeName: 'Reserva',
+                typeNamePlural: 'Reservas',
+                title: { type: #STANDARD, value: 'ReservaID' } } }
+
+annotate entity YC_RESERVA_DFLC with
+{
+
+  @UI.facet: [ { id:            'Reserva',
+                  purpose:       #STANDARD,
+                  type:          #IDENTIFICATION_REFERENCE,
+                  label:         'Reserva',
+                  position:      10 }  ]
+    
+  
+  @UI: { identification: [ { position: 10, label: 'Reserva UUID'  } ] }
+  ReservaUUID;
+  
+  @UI.hidden: true
+  ViagemUUID;
+  
+  @UI: { lineItem:       [ { position: 20 } ],
+         identification: [ { position: 20 } ] }
+  ReservaID;
+  
+  @UI: { lineItem:       [ { position: 30 } ],
+         identification: [ { position: 30 } ] }
+  DataReserva;
+  
+  @UI: { lineItem:       [ { position: 40 } ],
+         identification: [ { position: 40 } ] }
+  ClienteID;
+  
+  @UI: { lineItem:       [ { position: 50 } ],
+         identification: [ { position: 50 } ] }
+  OperadoraID;
+  
+  @UI: { lineItem:       [ { position: 60 } ],
+         identification: [ { position: 60 } ] }
+  ConexaoID;
+  
+  @UI: { lineItem:       [ { position: 70 } ],
+         identification: [ { position: 70 } ] }
+  DataVoo;
+  
+  @UI: { lineItem:       [ { position: 80 } ],
+         identification: [ { position: 80 } ] }
+  PrecoVoo;
+  
+  @UI.hidden: true
+  UltimaModificacaoPorLocal;
+
+}

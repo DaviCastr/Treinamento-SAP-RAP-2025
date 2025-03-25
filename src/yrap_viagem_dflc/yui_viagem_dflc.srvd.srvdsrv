@@ -1,0 +1,13 @@
+@EndUserText.label: 'Definição de serviço para App de Viagem'
+define service YUI_VIAGEM_DFLC {
+  expose YC_VIAGEM_DFLC    as Viagem;
+  expose YC_RESERVA_DFLC   as Reserva;
+  expose /DMO/I_Agency     as Agencia;
+  expose /DMO/I_Customer   as Cliente;
+  expose /DMO/I_Flight     as Voo;
+  expose /DMO/I_Carrier    as Operadora;
+  expose /DMO/I_Connection as Conexao;
+  expose /DMO/I_Airport    as Aeroporto;
+  expose I_Currency        as Moeda;
+  expose I_Country         as Pais;
+}
