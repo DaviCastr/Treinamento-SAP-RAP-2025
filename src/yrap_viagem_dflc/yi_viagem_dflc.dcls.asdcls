@@ -1,0 +1,13 @@
+@EndUserText.label: 'Controle de acesso YI_VIAGEM_DFLC'
+@MappingRole: true
+define role YI_VIAGEM_DFLC {
+    grant
+        select
+            on
+                YI_VIAGEM_DFLC
+                    where
+                         //( StatusGeral) = aspect pfcg_auth ( YOSTS_DFLC, YFSTS_DFLC,  actvt = '03') 
+                        // and CodigoMoeda = 'EUR'
+                        true; 
+                        
+}

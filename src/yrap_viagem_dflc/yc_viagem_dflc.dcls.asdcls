@@ -1,0 +1,11 @@
+@EndUserText.label: 'Controle de acesso para YC_VIAGEM_DFLC'
+@MappingRole: true
+define role YC_VIAGEM_DFLC {
+    grant
+        select
+            on
+                YC_VIAGEM_DFLC
+                    where
+                        inheriting conditions from entity YI_VIAGEM_DFLC;
+                        
+}
