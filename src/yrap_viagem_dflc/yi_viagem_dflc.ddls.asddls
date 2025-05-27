@@ -25,7 +25,7 @@ define root view entity YI_VIAGEM_DFLC
       preco_total                 as PrecoTotal,
       codigo_moeda                as CodigoMoeda,
       descricao                   as Descricao,
-      status_geral                as StatusGeral,
+      status_geral                as StatusViagem,
       @Semantics.user.createdBy: true
       criado_por                  as CriadoPor,
       @Semantics.systemDateTime.createdAt: true

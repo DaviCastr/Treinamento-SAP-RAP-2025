@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS ycl_hello_world_rap_dflc IMPLEMENTATION.
+CLASS YCL_HELLO_WORLD_RAP_DFLC IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -22,5 +22,4 @@ CLASS ycl_hello_world_rap_dflc IMPLEMENTATION.
     out->write( |Hello World { lv_nome }| ).
 
   ENDMETHOD.
-
 ENDCLASS.

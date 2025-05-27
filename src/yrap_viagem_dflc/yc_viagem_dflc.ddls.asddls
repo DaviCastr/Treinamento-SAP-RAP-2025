@@ -28,7 +28,7 @@ define root view entity YC_VIAGEM_DFLC
       @Consumption.valueHelpDefinition: [{ entity: { name: 'I_Currency', element: 'Currency'} }]
       CodigoMoeda,
       Descricao,
-      StatusGeral,
+      StatusViagem,
       UltimaModificacaoEm,
       UltimaModificacaoEmLocal,
 

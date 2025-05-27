@@ -1,0 +1,74 @@
+managed;
+//strict ( 2 );
+
+define behavior for YI_VIAGEM_DFLC alias Viagem
+implementation in class ycl_viagem_dflc unique
+persistent table ytviagem_dflc
+lock master
+//authorization master ( instance )
+etag master UltimaModificacaoEmLocal
+{
+
+  field ( numbering : managed, readonly ) ViagemUUID;
+
+  create ( authorization : global );
+  update;
+  delete;
+
+  association _Reserva { create; }
+
+  mapping for ytviagem_dflc
+    {
+      viagemUUID               = viagem_uuid;
+      ViagemID                 = viagem_id;
+      AgenciaID                = Agencia_id;
+      ClienteID                = Cliente_id;
+      DataInicio               = data_inicio;
+      DataFim                  = data_fim;
+      TaxaReserva              = taxa_reserva;
+      PrecoTotal               = preco_total;
+      CodigoMoeda              = codigo_moeda;
+      Descricao                = Descricao;
+      StatusViagem             = status_geral;
+      CriadoPor                = criado_por;
+      CriadoEm                 = criado_em;
+      UltimaModificacaoPor     = ultima_modificacao_por;
+      UltimaModificacaoEm      = ultima_modificacao_em;
+      UltimaModificacaoEmLocal = ultima_modificacao_em_local;
+    }
+
+}
+
+define behavior for YI_RESERVA_DFLC alias Reserva
+implementation in class ycl_reserva_dflc unique
+persistent table ytreserva_dflc
+lock dependent by _Viagem
+//authorization dependent by _Viagem
+etag master UltimaModificacaoPorLocal
+{
+  field ( numbering : managed, readonly ) ReservaUUID;
+  field ( readonly ) ViagemUUID;
+
+  update;
+  delete;
+
+  association _Viagem;
+
+  mapping for ytreserva_dflc
+    {
+      ReservaUUID               = Reserva_uuid;
+      ViagemUUID                = Viagem_uuid;
+      ReservaID                 = Reserva_id;
+      DataReserva               = Data_Reserva;
+      ClienteID                 = Cliente_id;
+      OperadoraID               = operadora_id;
+      ConexaoID                 = conexao_id;
+      DataVoo                   = data_voo;
+      PrecoVoo                  = preco_voo;
+      CodigoMoeda               = codigo_moeda;
+      CriadoPor                 = criado_por;
+      UltimaModificacaoPor      = ultima_modificacao_por;
+      UltimaModificacaoPorLocal = ultima_modificacao_por_local;
+    }
+
+}

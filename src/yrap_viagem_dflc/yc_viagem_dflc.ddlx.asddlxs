@@ -21,7 +21,7 @@ annotate entity YC_VIAGEM_DFLC with
                   position:        20,
                   targetElement:   '_Reserva'} ]
 
-  @UI:{ identification: [{ position: 1, label: 'Viagem UUID' }] }
+  @UI.hidden: true
   ViagemUUID;
 
   @UI: {  lineItem:       [ { position: 10 } ],
@@ -61,7 +61,7 @@ annotate entity YC_VIAGEM_DFLC with
 
   @UI: {  lineItem:       [ { position: 90 } ],
           identification: [ { position: 90 } ] }
-  StatusGeral;
+  StatusViagem;
 
   @UI.hidden: true
   UltimaModificacaoEm;
