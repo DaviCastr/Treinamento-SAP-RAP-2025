@@ -11,7 +11,7 @@ etag master UltimaModificacaoEmLocal
 
   field ( numbering : managed, readonly ) ViagemUUID;
 
-  create ( authorization : global );
+  create;
   update;
   delete;
 
