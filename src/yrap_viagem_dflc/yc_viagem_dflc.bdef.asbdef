@@ -8,6 +8,9 @@ use etag
   use update;
   use delete;
 
+  use action aceitarViagem;
+  use action rejeitarViagem;
+
   use association _Reserva { create; }
 }
 

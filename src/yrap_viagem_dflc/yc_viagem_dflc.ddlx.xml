@@ -5,7 +5,8 @@
    <DDLX>
     <METADATA>
      <NAME>YC_VIAGEM_DFLC</NAME>
-     <MASTER_LANGUAGE>PT</MASTER_LANGUAGE>
+     <DESCRIPTION>Metadade de viagem</DESCRIPTION>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
     </METADATA>
    </DDLX>
   </asx:values>

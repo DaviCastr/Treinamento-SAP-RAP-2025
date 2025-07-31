@@ -59,8 +59,14 @@ annotate entity YC_VIAGEM_DFLC with
           identification: [ { position: 80 } ] }
   Descricao;
 
-  @UI: {  lineItem:       [ { position: 90 } ],
-          identification: [ { position: 90 } ] }
+  @UI: {  lineItem:       [ { position: 90 },
+                            { type: #FOR_ACTION, dataAction: 'aceitarViagem', label: 'Aceitar Viagem' },
+                            { type: #FOR_ACTION, dataAction: 'rejeitarViagem', label: 'Rejeitar Viagem' }
+                          ],
+          identification: [ { position: 90 },
+                            { type: #FOR_ACTION, dataAction: 'aceitarViagem', label: 'Aceitar Viagem' },
+                            { type: #FOR_ACTION, dataAction: 'rejeitarViagem', label: 'Rejeitar Viagem' }
+                          ] } 
   StatusViagem;
 
   @UI.hidden: true

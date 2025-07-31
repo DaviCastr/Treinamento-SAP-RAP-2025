@@ -5,17 +5,32 @@ define behavior for YI_VIAGEM_DFLC alias Viagem
 implementation in class ycl_viagem_dflc unique
 persistent table ytviagem_dflc
 lock master
-//authorization master ( instance )
+authorization master ( instance )
 etag master UltimaModificacaoEmLocal
 {
 
   field ( numbering : managed, readonly ) ViagemUUID;
+  field ( readonly ) ViagemID, PrecoTotal, StatusViagem;
+  field ( readonly ) UltimaModificacaoEm, UltimaModificacaoPor, CriadoEm, CriadoPor, UltimaModificacaoEmLocal;
+  field ( mandatory ) AgenciaID, ClienteID;
 
   create;
   update;
   delete;
 
   association _Reserva { create; }
+
+  action ( features : instance ) aceitarViagem result [1] $self;
+  action ( features : instance ) rejeitarViagem result [1] $self;
+  internal action recalcularPrecoTotal;
+
+  determination definirStatusInicial on modify { create; }
+  determination calcularPrecoTotal on modify { field TaxaReserva, CodigoMoeda; }
+  determination calcularViagemID on save { create; }
+
+  validation validarAgencia on save { field AgenciaID; create; }
+  validation validarCliente on save { field ClienteID; create; }
+  validation validarDatas on save { field DataInicio, DataFim; create; }
 
   mapping for ytviagem_dflc
     {
@@ -44,15 +59,19 @@ implementation in class ycl_reserva_dflc unique
 persistent table ytreserva_dflc
 lock dependent by _Viagem
 //authorization dependent by _Viagem
-etag master UltimaModificacaoPorLocal
+etag master UltimaModificacaoEmLocal
 {
   field ( numbering : managed, readonly ) ReservaUUID;
-  field ( readonly ) ViagemUUID;
+  field ( readonly ) ViagemUUID, ReservaID;
+  field ( readonly ) CriadoPor, UltimaModificacaoPor, UltimaModificacaoEmLocal;
 
   update;
   delete;
 
   association _Viagem;
+
+  determination calcularReservaID on modify { create; }
+  determination calcularPrecoTotal on modify { field PrecoVoo, CodigoMoeda; }
 
   mapping for ytreserva_dflc
     {
@@ -68,7 +87,7 @@ etag master UltimaModificacaoPorLocal
       CodigoMoeda               = codigo_moeda;
       CriadoPor                 = criado_por;
       UltimaModificacaoPor      = ultima_modificacao_por;
-      UltimaModificacaoPorLocal = ultima_modificacao_por_local;
+      UltimaModificacaoEmLocal = ultima_modificacao_em_local;
     }
 
 }

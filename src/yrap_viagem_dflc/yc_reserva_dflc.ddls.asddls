@@ -31,7 +31,7 @@ define view entity YC_RESERVA_DFLC
       PrecoVoo,
       @Consumption.valueHelpDefinition: [{entity: {name: 'I_Currency', element: 'Currency' }}]
       CodigoMoeda,
-      UltimaModificacaoPorLocal,
+      UltimaModificacaoEmLocal,
       
       /* Associations */
       _Cliente,

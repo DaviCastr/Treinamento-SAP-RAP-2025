@@ -32,7 +32,7 @@ define view entity YI_RESERVA_DFLC
       @Semantics.user.lastChangedBy: true
       ultima_modificacao_por       as UltimaModificacaoPor,
       @Semantics.systemDateTime.localInstanceLastChangedAt: true
-      ultima_modificacao_por_local as UltimaModificacaoPorLocal,
+      ultima_modificacao_em_local as UltimaModificacaoEmLocal,
 
       /* Associações */
       _Viagem,
