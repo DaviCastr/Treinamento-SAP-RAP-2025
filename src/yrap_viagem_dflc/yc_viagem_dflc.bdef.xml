@@ -7,7 +7,7 @@
     <TYPE>BDEF/BDO</TYPE>
     <DESCRIPTION>Definição de comportamento - Projeção</DESCRIPTION>
     <DESCRIPTION_TEXT_LIMIT>60</DESCRIPTION_TEXT_LIMIT>
-    <LANGUAGE>EN</LANGUAGE>
+    <LANGUAGE>PT</LANGUAGE>
     <LINKS>
      <item>
       <HREF>./yc_viagem_dflc/source/main/versions</HREF>
@@ -27,7 +27,7 @@
       <TITLE>Source Content (HTML)</TITLE>
      </item>
     </LINKS>
-    <MASTER_LANGUAGE>PT</MASTER_LANGUAGE>
+    <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
     <SOURCE_URI>./yc_viagem_dflc/source/main</SOURCE_URI>
     <SOURCE_TYPE>ABAP_SOURCE</SOURCE_TYPE>

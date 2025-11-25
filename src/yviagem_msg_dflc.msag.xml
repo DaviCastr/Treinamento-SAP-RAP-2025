@@ -4,46 +4,41 @@
   <asx:values>
    <T100A>
     <ARBGB>YVIAGEM_MSG_DFLC</ARBGB>
-    <MASTERLANG>E</MASTERLANG>
-    <STEXT>MSG Viagem</STEXT>
+    <MASTERLANG>P</MASTERLANG>
+    <STEXT>Classe de mensagem</STEXT>
    </T100A>
-   <I18N_LANGS>
-    <LANGU>E</LANGU>
-   </I18N_LANGS>
-   <T100T>
-    <T100T>
-     <SPRSL>E</SPRSL>
+   <T100>
+    <T100>
+     <SPRSL>P</SPRSL>
      <ARBGB>YVIAGEM_MSG_DFLC</ARBGB>
-     <STEXT>MSG Viagem</STEXT>
-    </T100T>
-   </T100T>
-   <T100_TEXTS>
-    <item>
-     <SPRSL>E</SPRSL>
      <MSGNR>001</MSGNR>
      <TEXT>Data de início &amp;1 não deve ser maior que a data fim &amp;2 para a viagem &amp;3.</TEXT>
-    </item>
-    <item>
-     <SPRSL>E</SPRSL>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>YVIAGEM_MSG_DFLC</ARBGB>
      <MSGNR>002</MSGNR>
      <TEXT>Data de início &amp;1 deve ser igual ou maior a data do sistema.</TEXT>
-    </item>
-    <item>
-     <SPRSL>E</SPRSL>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>YVIAGEM_MSG_DFLC</ARBGB>
      <MSGNR>003</MSGNR>
      <TEXT>Cliente &amp;1 não existe.</TEXT>
-    </item>
-    <item>
-     <SPRSL>E</SPRSL>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>YVIAGEM_MSG_DFLC</ARBGB>
      <MSGNR>004</MSGNR>
      <TEXT>Agência &amp;1 não existe.</TEXT>
-    </item>
-    <item>
-     <SPRSL>E</SPRSL>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>YVIAGEM_MSG_DFLC</ARBGB>
      <MSGNR>005</MSGNR>
      <TEXT>Você não está autorizado a realizar esta atividade</TEXT>
-    </item>
-   </T100_TEXTS>
+    </T100>
+   </T100>
   </asx:values>
  </asx:abap>
 </abapGit>

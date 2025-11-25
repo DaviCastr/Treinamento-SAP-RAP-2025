@@ -8,7 +8,7 @@ CLASS ycx_viagem_dflc DEFINITION
 
     CONSTANTS:
       BEGIN OF Data_Inicio_Maior_Data_Fim,
-        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_####',
+        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_DFLC',
         msgno TYPE symsgno VALUE '001',
         attr1 TYPE scx_attrname VALUE 'GV_DATAINICIO',
         attr2 TYPE scx_attrname VALUE 'GV_DATAFIM',
@@ -17,7 +17,7 @@ CLASS ycx_viagem_dflc DEFINITION
       END OF Data_Inicio_Maior_Data_Fim .
     CONSTANTS:
       BEGIN OF Data_Inicio_Menor_Data_Sistema,
-        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_####',
+        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_DFLC',
         msgno TYPE symsgno VALUE '002',
         attr1 TYPE scx_attrname VALUE 'GV_DATAINICIO',
         attr2 TYPE scx_attrname VALUE '',
@@ -26,7 +26,7 @@ CLASS ycx_viagem_dflc DEFINITION
       END OF Data_Inicio_Menor_Data_Sistema .
     CONSTANTS:
       BEGIN OF Cliente_Nao_Existe,
-        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_####',
+        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_DFLC',
         msgno TYPE symsgno VALUE '003',
         attr1 TYPE scx_attrname VALUE 'GV_CLIENTEID',
         attr2 TYPE scx_attrname VALUE '',
@@ -35,7 +35,7 @@ CLASS ycx_viagem_dflc DEFINITION
       END OF Cliente_Nao_Existe .
     CONSTANTS:
       BEGIN OF Agencia_Nao_Existe,
-        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_####',
+        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_DFLC',
         msgno TYPE symsgno VALUE '004',
         attr1 TYPE scx_attrname VALUE 'GV_AGENCIAID',
         attr2 TYPE scx_attrname VALUE '',
@@ -44,7 +44,7 @@ CLASS ycx_viagem_dflc DEFINITION
       END OF Agencia_Nao_Existe .
     CONSTANTS:
       BEGIN OF Sem_Autorizacao,
-        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_####',
+        msgid TYPE symsgid VALUE 'YVIAGEM_MSG_DFLC',
         msgno TYPE symsgno VALUE '005',
         attr1 TYPE scx_attrname VALUE '',
         attr2 TYPE scx_attrname VALUE '',

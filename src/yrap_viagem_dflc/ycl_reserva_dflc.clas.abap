@@ -1,5 +1,9 @@
 CLASS ycl_reserva_dflc DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF yi_viagem_dflc.
+protected section.
+private section.
 ENDCLASS.
 
-CLASS ycl_reserva_dflc IMPLEMENTATION.
+
+
+CLASS YCL_RESERVA_DFLC IMPLEMENTATION.
 ENDCLASS.

@@ -1,13 +1,13 @@
-@EndUserText.label: 'Controle de acesso YI_VIAGEM_DFLC'
+@EndUserText.label: 'CDS de atutorização'
 @MappingRole: true
 define role YI_VIAGEM_DFLC {
-    grant
+    grant 
         select
             on
                 YI_VIAGEM_DFLC
                     where
-                         //( StatusGeral) = aspect pfcg_auth ( YOSTS_DFLC, YFSTS_DFLC,  actvt = '03') 
-                        // and CodigoMoeda = 'EUR'
-                        true; 
+                        //( StatusViagem ) = aspect pfcg_auth ( YOSTS_DFLC, YFSTS_DFLC,  actvt = '03') 
+                        // and CodigoMoeda = 'EUR';
+                        true;
                         
 }

@@ -1,8 +1,9 @@
 projection;
 //strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+use draft;
 
 define behavior for YC_VIAGEM_DFLC alias Viagem
-use etag
+//use etag
 {
   use create;
   use update;
@@ -11,14 +12,14 @@ use etag
   use action aceitarViagem;
   use action rejeitarViagem;
 
-  use association _Reserva { create; }
+  use association _Reserva { create; with draft; }
 }
 
 define behavior for YC_RESERVA_DFLC alias Reserva
-use etag
+//use etag
 {
   use update;
   use delete;
 
-  use association _Viagem;
+  use association _Viagem{ with draft; }
 }

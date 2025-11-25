@@ -1,10 +1,13 @@
 managed;
 //strict ( 2 );
+with draft;
 
 define behavior for YI_VIAGEM_DFLC alias Viagem
 implementation in class ycl_viagem_dflc unique
 persistent table ytviagem_dflc
+draft table ytviagemd_dflc
 lock master
+total etag UltimaModificacaoEm
 authorization master ( instance )
 etag master UltimaModificacaoEmLocal
 {
@@ -18,7 +21,7 @@ etag master UltimaModificacaoEmLocal
   update;
   delete;
 
-  association _Reserva { create; }
+  association _Reserva { create; with draft; }
 
   action ( features : instance ) aceitarViagem result [1] $self;
   action ( features : instance ) rejeitarViagem result [1] $self;
@@ -31,6 +34,13 @@ etag master UltimaModificacaoEmLocal
   validation validarAgencia on save { field AgenciaID; create; }
   validation validarCliente on save { field ClienteID; create; }
   validation validarDatas on save { field DataInicio, DataFim; create; }
+
+  draft determine action Prepare
+  {
+    validation validarAgencia;
+    validation validarCliente;
+    validation validarDatas;
+  }
 
   mapping for ytviagem_dflc
     {
@@ -57,8 +67,9 @@ etag master UltimaModificacaoEmLocal
 define behavior for YI_RESERVA_DFLC alias Reserva
 implementation in class ycl_reserva_dflc unique
 persistent table ytreserva_dflc
+draft table ytreservad_dflc
 lock dependent by _Viagem
-//authorization dependent by _Viagem
+authorization dependent by _Viagem
 etag master UltimaModificacaoEmLocal
 {
   field ( numbering : managed, readonly ) ReservaUUID;
@@ -68,25 +79,25 @@ etag master UltimaModificacaoEmLocal
   update;
   delete;
 
-  association _Viagem;
+  association _Viagem { with draft; }
 
   determination calcularReservaID on modify { create; }
   determination calcularPrecoTotal on modify { field PrecoVoo, CodigoMoeda; }
 
   mapping for ytreserva_dflc
     {
-      ReservaUUID               = Reserva_uuid;
-      ViagemUUID                = Viagem_uuid;
-      ReservaID                 = Reserva_id;
-      DataReserva               = Data_Reserva;
-      ClienteID                 = Cliente_id;
-      OperadoraID               = operadora_id;
-      ConexaoID                 = conexao_id;
-      DataVoo                   = data_voo;
-      PrecoVoo                  = preco_voo;
-      CodigoMoeda               = codigo_moeda;
-      CriadoPor                 = criado_por;
-      UltimaModificacaoPor      = ultima_modificacao_por;
+      ReservaUUID              = Reserva_uuid;
+      ViagemUUID               = Viagem_uuid;
+      ReservaID                = Reserva_id;
+      DataReserva              = Data_Reserva;
+      ClienteID                = Cliente_id;
+      TransportadoraID         = Transportadora_id;
+      ConexaoID                = conexao_id;
+      DataVoo                  = data_voo;
+      PrecoVoo                 = preco_voo;
+      CodigoMoeda              = codigo_moeda;
+      CriadoPor                = criado_por;
+      UltimaModificacaoPor     = ultima_modificacao_por;
       UltimaModificacaoEmLocal = ultima_modificacao_em_local;
     }
 

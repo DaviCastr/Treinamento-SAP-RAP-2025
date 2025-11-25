@@ -21,7 +21,7 @@ annotate entity YC_VIAGEM_DFLC with
                   position:        20,
                   targetElement:   '_Reserva'} ]
 
-  @UI.hidden: true
+  @UI:{ identification: [{ position: 1, label: 'Viagem UUID' }] }
   ViagemUUID;
 
   @UI: {  lineItem:       [ { position: 10 } ],
@@ -59,14 +59,8 @@ annotate entity YC_VIAGEM_DFLC with
           identification: [ { position: 80 } ] }
   Descricao;
 
-  @UI: {  lineItem:       [ { position: 90 },
-                            { type: #FOR_ACTION, dataAction: 'aceitarViagem', label: 'Aceitar Viagem' },
-                            { type: #FOR_ACTION, dataAction: 'rejeitarViagem', label: 'Rejeitar Viagem' }
-                          ],
-          identification: [ { position: 90 },
-                            { type: #FOR_ACTION, dataAction: 'aceitarViagem', label: 'Aceitar Viagem' },
-                            { type: #FOR_ACTION, dataAction: 'rejeitarViagem', label: 'Rejeitar Viagem' }
-                          ] } 
+  @UI: {  lineItem:       [ { position: 90 } ],
+          identification: [ { position: 90 } ] }
   StatusViagem;
 
   @UI.hidden: true

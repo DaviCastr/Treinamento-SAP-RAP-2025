@@ -13,9 +13,9 @@
     <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
    </TOBJ_ATTR>
    <TOBJT>
-    <LANGU>E</LANGU>
+    <LANGU>P</LANGU>
     <OBJECT>YOSTS_DFLC</OBJECT>
-    <TTEXT>objeto de autorização para status de viagem</TTEXT>
+    <TTEXT>Objeto de autorização</TTEXT>
    </TOBJT>
    <TACTZ>
     <TACTZ>

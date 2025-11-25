@@ -12,44 +12,44 @@ annotate entity YC_RESERVA_DFLC with
                   purpose:       #STANDARD,
                   type:          #IDENTIFICATION_REFERENCE,
                   label:         'Reserva',
-                  position:      10 }  ] 
-    
-  
+                  position:      10 }  ]
+
+
   @UI.hidden: true
   ReservaUUID;
-  
+
   @UI.hidden: true
   ViagemUUID;
-  
+
   @UI: { lineItem:       [ { position: 20 } ],
          identification: [ { position: 20 } ] }
   ReservaID;
-  
+
   @UI: { lineItem:       [ { position: 30 } ],
          identification: [ { position: 30 } ] }
   DataReserva;
-  
+
   @UI: { lineItem:       [ { position: 40 } ],
          identification: [ { position: 40 } ] }
   ClienteID;
-  
+
   @UI: { lineItem:       [ { position: 50 } ],
          identification: [ { position: 50 } ] }
-  OperadoraID;
-  
+  TransportadoraID;
+
   @UI: { lineItem:       [ { position: 60 } ],
          identification: [ { position: 60 } ] }
   ConexaoID;
-  
+
   @UI: { lineItem:       [ { position: 70 } ],
          identification: [ { position: 70 } ] }
   DataVoo;
-  
+
   @UI: { lineItem:       [ { position: 80 } ],
          identification: [ { position: 80 } ] }
   PrecoVoo;
-  
+
   @UI.hidden: true
-  UltimaModificacaoPorLocal;
+  UltimaModificacaoEmLocal;
 
 }

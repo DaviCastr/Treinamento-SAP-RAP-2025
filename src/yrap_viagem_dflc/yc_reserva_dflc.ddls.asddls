@@ -17,11 +17,11 @@ define view entity YC_RESERVA_DFLC
       ClienteID,
       _Cliente.LastName as NomeCliente,
       @Consumption.valueHelpDefinition: [{entity: {name: '/DMO/I_Carrier', element: 'AirlineID' }}]
-      @ObjectModel.text.element: ['NomeOperadora']
-      OperadoraID,
-      _Operadora.Name   as NomeOperadora,
+      @ObjectModel.text.element: ['NomeTransportadora']
+      TransportadoraID,
+      _Transportadora.Name   as NomeTransportadora,
       @Consumption.valueHelpDefinition: [ {entity: {name: '/DMO/I_Flight', element: 'ConnectionID'},
-                                           additionalBinding: [ { localElement: 'OperadoraID',    element: 'AirlineID' },
+                                           additionalBinding: [ { localElement: 'TransportadoraID',    element: 'AirlineID' },
                                                                 { localElement: 'DataVoo',     element: 'FlightDate',   usage: #RESULT},
                                                                 { localElement: 'PrecoVoo',    element: 'Price',        usage: #RESULT },
                                                                 { localElement: 'CodigoMoeda', element: 'CurrencyCode', usage: #RESULT } ] } ]
@@ -37,7 +37,7 @@ define view entity YC_RESERVA_DFLC
       _Cliente,
       _Conexao,
       _Moeda,
-      _Operadora,
+      _Transportadora,
       _Viagem: redirected to parent YC_VIAGEM_DFLC,
       _Voo
 }

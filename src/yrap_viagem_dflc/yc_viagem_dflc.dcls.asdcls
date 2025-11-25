@@ -1,7 +1,7 @@
-@EndUserText.label: 'Controle de acesso para YC_VIAGEM_DFLC'
+@EndUserText.label: 'CDS de autorização Viagem'
 @MappingRole: true
 define role YC_VIAGEM_DFLC {
-    grant
+    grant 
         select
             on
                 YC_VIAGEM_DFLC

@@ -526,8 +526,8 @@ CLASS lcl_Viagem IMPLEMENTATION.
     lv_atualizacao_requerida = COND #( WHEN requested_authorizations-%update                = if_abap_behv=>mk-on OR
                                             requested_authorizations-%action-aceitarViagem  = if_abap_behv=>mk-on OR
                                             requested_authorizations-%action-rejeitarViagem = if_abap_behv=>mk-on OR
-                                            "requested_authorizations-%action-Prepare      = if_abap_behv=>mk-on OR
-                                            "requested_authorizations-%action-Edit         = if_abap_behv=>mk-on OR
+                                            requested_authorizations-%action-Prepare        = if_abap_behv=>mk-on OR
+                                            requested_authorizations-%action-Edit           = if_abap_behv=>mk-on OR
                                             requested_authorizations-%assoc-_Reserva        = if_abap_behv=>mk-on
                                        THEN abap_true ELSE abap_false ).
 
@@ -595,8 +595,8 @@ CLASS lcl_Viagem IMPLEMENTATION.
                       %update                = COND #( WHEN lv_atualizacao_permitida = abap_true THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
                       %action-aceitarViagem  = COND #( WHEN lv_atualizacao_permitida = abap_true THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
                       %action-rejeitarViagem = COND #( WHEN lv_atualizacao_permitida = abap_true THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
-                      "%action-Prepare        = COND #( WHEN lv_atualizacao_permitida = abap_true THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
-                      "%action-Edit           = COND #( WHEN lv_atualizacao_permitida = abap_true THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
+                      %action-Prepare        = COND #( WHEN lv_atualizacao_permitida = abap_true THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
+                      %action-Edit           = COND #( WHEN lv_atualizacao_permitida = abap_true THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
                       %assoc-_Reserva        = COND #( WHEN lv_atualizacao_permitida = abap_true THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
                       %delete                = COND #( WHEN lv_exclusao_permitida = abap_true    THEN if_abap_behv=>auth-allowed ELSE if_abap_behv=>auth-unauthorized )
                     )
