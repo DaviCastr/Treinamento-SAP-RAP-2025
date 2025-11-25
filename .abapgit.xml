@@ -3,7 +3,7 @@
  <asx:values>
   <DATA>
    <MASTER_LANGUAGE>P</MASTER_LANGUAGE>
-   <STARTING_FOLDER>/ytreinamento_rap_dflc/</STARTING_FOLDER>
+   <STARTING_FOLDER>/src/</STARTING_FOLDER>
    <FOLDER_LOGIC>FULL</FOLDER_LOGIC>
    <IGNORE>
     <item>/.gitignore</item>
