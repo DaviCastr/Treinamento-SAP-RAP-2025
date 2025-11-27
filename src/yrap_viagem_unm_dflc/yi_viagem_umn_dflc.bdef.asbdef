@@ -1,0 +1,69 @@
+unmanaged;
+//strict ( 2 );
+
+define behavior for YI_VIAGEM_UMN_DFLC alias Viagem
+implementation in class zcl_viagem_umn_dflc unique
+lock master
+authorization master ( instance )
+etag master UltimaModificacaoEm
+{
+
+  create;// ( authorization : global );
+  update;
+  delete;
+
+  field ( readonly ) ViagemID;
+  field ( mandatory ) AgenciaID, ClienteID, DataInicio, DataFim;
+
+  association _Reserva { create; }
+
+
+  mapping for /dmo/travel control ysrap_viagem_x_dflc
+    {
+      ViagemID             = travel_id;
+      AgenciaID            = AGENCY_ID;
+      ClienteID            = CUSTOMER_ID;
+      DataInicio           = BEGIN_DATE;
+      DataFim              = END_DATE;
+      TaxaReserva          = BOOKING_FEE;
+      PrecoTotal           = TOTAL_PRICE;
+      CodigoMoeda          = CURRENCY_CODE;
+      Descricao            = DESCRIPTION;
+      Status               = STATUS;
+      CriadoPor            = CREATEDBY;
+      CriadoEm             = CREATEDAT;
+      UltimaModificacaoPor = LASTCHANGEDBY;
+      UltimaModificacaoEm  = LASTCHANGEDAT;
+    }
+
+}
+
+define behavior for YI_RESERVA_UMN_DFLC alias Reserva
+implementation in class zcl_reserva_umn_dflc unique
+lock dependent by _Viagem
+authorization dependent by _Viagem
+etag dependent by _Viagem
+{
+
+  update;
+  delete;
+
+  field ( readonly ) ViagemID, ReservaID;
+  field ( mandatory ) DataReserva, ClienteID, TransportadoraID, ConexaoID, DataVoo;
+
+  association _Viagem;
+
+  mapping for /dmo/booking control ysrap_reserva_x_dflc
+    {
+      ViagemID         = TRAVEL_ID;
+      ReservaID        = BOOKING_ID;
+      DataReserva      = BOOKING_DATE;
+      ClienteID        = CUSTOMER_ID;
+      TransportadoraID = CARRIER_ID;
+      ConexaoID        = CONNECTION_ID;
+      DataVoo          = FLIGHT_DATE;
+      PrecoVoo         = FLIGHT_PRICE;
+      CodigoMoeda      = CURRENCY_CODE;
+    }
+
+}

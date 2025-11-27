@@ -1,0 +1,12 @@
+@EndUserText.label: 'Serviço de viagem EXT'
+define service YUI_VIAGEM_EXT_DFLC {
+  expose YC_VIAGEM_EXT_DFLC as Viagem;
+  expose YI_CE_AGENCIA_DFLC as Agencia;
+  expose /DMO/I_Customer    as Cliente;
+  expose /DMO/I_Flight      as Voo;
+  expose /DMO/I_Carrier     as Operadora;
+  expose /DMO/I_Connection  as Conexao;
+  expose /DMO/I_Airport     as Aeroporto;
+  expose I_Currency         as Moeda;
+  expose I_Country          as Pais;
+}

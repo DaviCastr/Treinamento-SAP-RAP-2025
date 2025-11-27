@@ -1,0 +1,43 @@
+managed;
+//strict ( 2 );
+
+define behavior for YI_VIAGEM_EXT_DFLC alias Viagem
+implementation in class ycl_viagem_ext_dflc unique
+persistent table ytviagem_dflc
+lock master
+etag master UltimaModificacaoEmLocal
+{
+
+  field ( numbering : managed, readonly ) ViagemUUID;
+  field ( readonly ) ViagemID, PrecoTotal, StatusViagem;
+  field ( readonly ) UltimaModificacaoEm, UltimaModificacaoPor, CriadoEm, CriadoPor, UltimaModificacaoEmLocal;
+  field ( mandatory ) AgenciaID, ClienteID;
+
+  create;
+  update;
+  delete;
+
+
+  validation validarAgencia on save { field AgenciaID; create; }
+
+  mapping for ytviagem_dflc
+    {
+      viagemUUID               = viagem_uuid;
+      ViagemID                 = viagem_id;
+      AgenciaID                = Agencia_id;
+      ClienteID                = Cliente_id;
+      DataInicio               = data_inicio;
+      DataFim                  = data_fim;
+      TaxaReserva              = taxa_reserva;
+      PrecoTotal               = preco_total;
+      CodigoMoeda              = codigo_moeda;
+      Descricao                = Descricao;
+      StatusViagem             = status_geral;
+      CriadoPor                = criado_por;
+      CriadoEm                 = criado_em;
+      UltimaModificacaoPor     = ultima_modificacao_por;
+      UltimaModificacaoEm      = ultima_modificacao_em;
+      UltimaModificacaoEmLocal = ultima_modificacao_em_local;
+    }
+
+}

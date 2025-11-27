@@ -3,10 +3,10 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DDLS>
-    <DDLNAME>YI_RESERVA_DFLC</DDLNAME>
+    <DDLNAME>YC_VIAGEM_EXT_DFLC</DDLNAME>
     <DDLANGUAGE>P</DDLANGUAGE>
-    <DDTEXT>Reserva BO</DDTEXT>
-    <SOURCE_TYPE>W</SOURCE_TYPE>
+    <DDTEXT>Viagem</DDTEXT>
+    <SOURCE_TYPE>P</SOURCE_TYPE>
    </DDLS>
   </asx:values>
  </asx:abap>

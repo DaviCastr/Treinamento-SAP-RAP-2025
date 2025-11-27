@@ -1,0 +1,12 @@
+@EndUserText.label: 'Serviço de viagem UMN'
+define service YUI_VIAGEM_UMN_DFLC {
+  expose YC_VIAGEM_UMN_DFLC  as Viagem;
+  expose YC_RESERVA_UMN_DFLC as Reserva;
+  expose /DMO/I_Customer     as Passageiro;
+  expose /DMO/I_Agency       as Agencia;
+  expose /DMO/I_Carrier      as Transportadora;
+  expose /DMO/I_Flight       as Voo;
+  expose /DMO/I_Connection   as Conexao;
+  expose /DMO/I_Airport      as Aeroporto;
+  expose I_Currency          as Moeda;
+}

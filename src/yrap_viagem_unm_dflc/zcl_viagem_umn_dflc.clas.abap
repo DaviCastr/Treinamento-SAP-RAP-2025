@@ -1,0 +1,5 @@
+CLASS zcl_viagem_umn_dflc DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF yi_viagem_umn_dflc.
+ENDCLASS.
+
+CLASS zcl_viagem_umn_dflc IMPLEMENTATION.
+ENDCLASS.

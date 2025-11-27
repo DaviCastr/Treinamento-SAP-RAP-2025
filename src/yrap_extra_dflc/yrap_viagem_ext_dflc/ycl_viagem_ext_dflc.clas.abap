@@ -1,0 +1,5 @@
+CLASS ycl_viagem_ext_dflc DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF yi_viagem_ext_dflc.
+ENDCLASS.
+
+CLASS ycl_viagem_ext_dflc IMPLEMENTATION.
+ENDCLASS.

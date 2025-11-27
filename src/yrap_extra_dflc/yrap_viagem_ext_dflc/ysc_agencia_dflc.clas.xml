@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>YSC_AGENCIA_DFLC</CLSNAME>
+    <LANGU>P</LANGU>
+    <DESCRIPT>Consumption model for client proxy - generated</DESCRIPT>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>YSC_AGENCIA_DFLC</CLSNAME>
+     <CMPNAME>DEF_Z_TRAVEL_AGENCY_ES_5_TYPE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Define Z_TRAVEL_AGENCY_ES5Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YSC_AGENCIA_DFLC</CLSNAME>
+     <CMPNAME>GCS_ENTITY_SET</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Internal Names of the entity sets</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YSC_AGENCIA_DFLC</CLSNAME>
+     <CMPNAME>GCS_ENTITY_TYPE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Internal names for entity types</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YSC_AGENCIA_DFLC</CLSNAME>
+     <CMPNAME>MO_MODEL</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Model</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YSC_AGENCIA_DFLC</CLSNAME>
+     <CMPNAME>TYS_Z_TRAVEL_AGENCY_ES_5_TYPE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Z_TRAVEL_AGENCY_ES5Type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YSC_AGENCIA_DFLC</CLSNAME>
+     <CMPNAME>TYT_Z_TRAVEL_AGENCY_ES_5_TYPE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>List of Z_TRAVEL_AGENCY_ES5Type</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>DEF_Z_TRAVEL_AGENCY_ES_5_TYPE</CMPNAME>
+     <SCONAME>/IWBEP/CX_GATEWAY</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Gateway Exception</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
