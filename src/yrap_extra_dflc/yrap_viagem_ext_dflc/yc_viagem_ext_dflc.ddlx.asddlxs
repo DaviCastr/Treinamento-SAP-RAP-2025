@@ -18,7 +18,8 @@ annotate entity YC_VIAGEM_EXT_DFLC with
   @UI:{ identification: [{ position: 1, label: 'Viagem UUID' }] }
   ViagemUUID;
 
-  @UI: {  lineItem:       [ { position: 10 } ],
+  @UI: {  lineItem:       [ { type: #FOR_ACTION, dataAction: 'testeAcao', label: 'Teste' },
+                            { position: 10 } ],
           identification: [ { position: 10 } ],
           selectionField: [ { position: 10 } ] }
   ViagemID;

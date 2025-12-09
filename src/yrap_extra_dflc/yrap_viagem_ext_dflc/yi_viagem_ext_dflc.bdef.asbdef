@@ -13,6 +13,8 @@ etag master UltimaModificacaoEmLocal
   field ( readonly ) UltimaModificacaoEm, UltimaModificacaoPor, CriadoEm, CriadoPor, UltimaModificacaoEmLocal;
   field ( mandatory ) AgenciaID, ClienteID;
 
+  static action testeAcao;
+
   create;
   update;
   delete;

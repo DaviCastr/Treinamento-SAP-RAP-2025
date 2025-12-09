@@ -6,4 +6,6 @@ define behavior for YC_VIAGEM_EXT_DFLC alias Viagem
   use create;
   use update;
   use delete;
+
+  use action testeAcao;
 }

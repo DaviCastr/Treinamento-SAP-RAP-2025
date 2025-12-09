@@ -3,6 +3,8 @@ CLASS lcl_Viagem DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
     METHODS validarAgencia FOR VALIDATE ON SAVE
       IMPORTING keys FOR Viagem~validarAgencia.
+    METHODS testeAcao FOR MODIFY
+      IMPORTING keys FOR ACTION Viagem~testeAcao.
 
 ENDCLASS.
 
@@ -96,6 +98,11 @@ CLASS lcl_Viagem IMPLEMENTATION.
       ENDIF.
 
     ENDLOOP.
+
+  ENDMETHOD.
+
+  METHOD testeAcao.
+
 
   ENDMETHOD.
 
