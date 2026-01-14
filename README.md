@@ -1,2 +1,2 @@
 # TreinamentoRAP-2025
-Treinamento que proparei de SAP RAP para aprimoramento de equipe ABAP
+Treinamento que preparei de SAP RAP para aprimoramento da equipe ABAP
