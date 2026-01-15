@@ -576,9 +576,13 @@ CLASS lcl_Viagem IMPLEMENTATION.
 
       ENDIF.
 
-      IF lv_exclusao_requerida = abap_true.
+      IF  lv_exclusao_requerida = abap_true.
 
-        lv_exclusao_permitida = permitido_deletar( iv_verifica_status = lv_verifica_status  iv_status_viagem = lo_viagem_gravada->status_geral ).
+        DATA(lv_status) = COND #( WHEN lo_viagem_gravada IS BOUND
+                                        THEN lo_viagem_gravada->status_geral
+                                        ELSE 'O ' ).
+
+        lv_exclusao_permitida = permitido_deletar( iv_verifica_status = lv_verifica_status  iv_status_viagem = lv_status ).
 
         IF lv_exclusao_permitida = abap_false.
 

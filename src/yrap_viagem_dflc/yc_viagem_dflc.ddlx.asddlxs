@@ -60,11 +60,11 @@ annotate entity YC_VIAGEM_DFLC with
   Descricao;
 
   @UI: {  lineItem:       [ { position: 90 },
-                            { type: #FOR_ACTION, dataAction: 'aprovarViagem', label: 'Aprovar Viagem' },
-                            { type: #FOR_ACTION, dataAction: 'reprovarViagem', label: 'Reprovar Viagem' } ],
+                            { type: #FOR_ACTION, dataAction: 'aceitarViagem', label: 'Aceitar Viagem' },
+                            { type: #FOR_ACTION, dataAction: 'rejeitarViagem', label: 'Rejeitar Viagem' } ],
           identification: [ { position: 90 },
-                            { type: #FOR_ACTION, dataAction: 'aprovarViagem', label: 'Aprovar Viagem' },
-                            { type: #FOR_ACTION, dataAction: 'reprovarViagem', label: 'Reprovar Viagem' } ] }
+                            { type: #FOR_ACTION, dataAction: 'aceitarViagem', label: 'Aceitar Viagem' },
+                            { type: #FOR_ACTION, dataAction: 'rejeitarViagem', label: 'Rejeitar Viagem' } ] }
   StatusViagem;
 
   @UI.hidden: true

@@ -19,7 +19,11 @@ CLASS ycl_gerar_dados_dflc IMPLEMENTATION.
 
     " Deleta dados existentes para não inserir duplicados
     DELETE FROM ytviagem_dflc.
+    DELETE FROM ytviagemd_dflc.
     DELETE FROM ytreserva_dflc.
+    DELETE FROM ytreservad_dflc.
+
+    COMMIT WORK.
 
     " insert travel demo data
     INSERT ytviagem_dflc FROM (
@@ -72,6 +76,7 @@ CLASS ycl_gerar_dados_dflc IMPLEMENTATION.
             z~ultima_modificacao_por AS ultima_modificacao_por,
             z~ultima_modificacao_em  AS ultima_modificacao_por_local
       ).
+
     COMMIT WORK.
 
     out->write( 'Dados demonstrativos inseridos.').
